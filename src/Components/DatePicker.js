@@ -1,26 +1,16 @@
-import * as React from 'react';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import * as React from "react";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
-export default function BasicDatePicker() {
+
+import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
+
+export default function InputDatePicker() {
   return (
-    <div style={{
-        display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '15vh',
-      width: '250vh',
-      position:'relative',
-      bottom:'580px',
-      
-    }}>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={['DatePicker']}>
-        <DatePicker label="Basic date picker" />
+      <DemoContainer components={["DatePicker"]}>
+        <DateTimePicker label="Basic date picker" />
       </DemoContainer>
     </LocalizationProvider>
-    </div>
   );
 }
